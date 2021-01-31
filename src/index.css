@@ -1,0 +1,14 @@
+:root{
+  --dark-blue: #363f5f;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f0f2f5;
+  font-family: 'Slabo 27px', serif;
+}
