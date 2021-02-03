@@ -2,6 +2,6 @@ import React from 'react'
 import './HeaderTitle.css'
 
 const HeaderTitle = props =>
-    <h1 id="logo">dev.finance$</h1>
+    <img src="assets/logo.svg" alt="Logo Dev FInance"/>
 
 export default HeaderTitle

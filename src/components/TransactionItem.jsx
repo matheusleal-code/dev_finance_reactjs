@@ -15,6 +15,7 @@ const TransactionItem = props => {
             <td className="description">{props.description}</td>
             <td className={transactionType(props)}>R$ {props.amount}</td>
             <td className="date">{props.date}</td>
+            <td><img src={props.img} alt={props.altImg}/></td>
         </tr>
     )
 }

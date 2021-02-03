@@ -1,31 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './DevFinance.css'
 
 import Balance from '../components/Balance'
 import FooterTitle from '../components/FooterTitle'
 import HeaderTitle from '../components/HeaderTitle'
 import Transaction from '../components/Transaction'
+import ModalNewTransaction from '../components/ModalNewTransaction'
 
-const DevFinance = props => (
-    <div>
+const DevFinance = props => {
 
-        <header>
-            <HeaderTitle />
-        </header>
+    const [modal, setModal] = useState("")
 
-        <main className="container">
+    return (
+        <div>
 
-            <Balance />
+            <header>
+                <HeaderTitle />
+            </header>
 
-            <Transaction />
+            <main className="container">
 
-        </main>
+                <Balance />
+                <a href="#" onClick={() => setModal("active")} className="button new">+ Nova Transação</a>
+                <Transaction />
 
-        <footer>
-            <FooterTitle />
-        </footer>
+            </main>
 
-    </div>
-)
+            <ModalNewTransaction modal={modal} setModal={() => setModal}/>
+
+            <footer>
+                <FooterTitle />
+            </footer>
+
+        </div>
+    )
+}
+
 
 export default DevFinance

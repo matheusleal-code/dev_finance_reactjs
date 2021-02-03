@@ -1,5 +1,7 @@
 :root{
   --dark-blue: #363f5f;
+  --green: #49AA26;
+  --light-green: #3dd705;
 }
 
 *{
@@ -8,7 +10,25 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 93.75%;
+}
+
 body{
   background: #f0f2f5;
   font-family: 'Slabo 27px', serif;
 }
+
+/* Responsive =============== */
+@media(min-width: 800px){
+  html{
+    font: 87.5%;
+  }
+
+  #balance{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+} 
